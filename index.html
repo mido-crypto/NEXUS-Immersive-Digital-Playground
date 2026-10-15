@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#070812">
+  <meta name="description"
+    content="NEXUS — an immersive experimental frontend showcase built with HTML, CSS and JavaScript.">
+  <title>NEXUS — Immersive Digital Playground</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <canvas id="particle-canvas" aria-hidden="true"></canvas>
+
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="NEXUS home">
+      <span class="brand-mark"><span></span><span></span><span></span></span>
+      <span>NEXUS<span class="brand-dot">.</span></span>
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a class="nav-link active" href="#home">Home</a>
+      <a class="nav-link" href="#experiments">Experiments</a>
+      <a class="nav-link" href="#about">About</a>
+    </nav>
+    <div class="header-actions">
+      <span class="status"><span class="status-dot"></span> SYSTEM ONLINE</span>
+      <button class="menu-toggle" aria-label="Toggle navigation"
+        aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section-shell" id="home">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-copy">
+        <p class="eyebrow reveal"><span class="eyebrow-line"></span> DIGITAL WORLDS / 001</p>
+        <h1 class="hero-title reveal">
+          <span>BEYOND</span>
+          <span class="title-second">THE <em>PIXELS</em><b class="title-star">✳</b></span>
+        </h1>
+        <p class="hero-description reveal">A playground for digital experiments, immersive visuals, and interfaces that
+          refuse to sit still.</p>
+        <div class="hero-buttons reveal">
+          <a class="button button-primary" href="#experiments"><span>Explore experiments</span><span
+              class="button-arrow">↗</span></a>
+          <a class="text-link" href="#about">What is NEXUS? <span>↓</span></a>
+        </div>
+        <div class="hero-meta reveal">
+          <div><span class="meta-label">CURRENT MODE</span><strong>EXPERIMENTAL</strong></div>
+          <div><span class="meta-label">BUILT WITH</span><strong>HTML / CSS / JS</strong></div>
+        </div>
+      </div>
+
+      <div class="hero-art" id="hero-art" aria-label="Abstract animated 3D orb illustration">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="orbit orbit-three"></div>
+        <div class="orb-shadow"></div>
+        <div class="orb">
+          <div class="orb-gloss"></div>
+          <div class="orb-band band-one"></div>
+          <div class="orb-band band-two"></div>
+          <div class="orb-band band-three"></div>
+          <div class="orb-core"></div>
+        </div>
+        <div class="orb-label label-top"><span>FIG. 01</span><i></i></div>
+        <div class="orb-label label-bottom"><i></i><span>FORM IN MOTION</span></div>
+        <div class="floating-chip chip-a"><span class="chip-icon">✳</span><span>REALTIME<br><b>RENDER</b></span></div>
+        <div class="floating-chip chip-b"><span
+            class="chip-bars"><i></i><i></i><i></i><i></i></span><span>DEPTH<br><b>FIELD 03</b></span></div>
+        <span class="crosshair crosshair-a">+</span><span class="crosshair crosshair-b">+</span>
+      </div>
+      <div class="scroll-cue"><span class="scroll-line"></span> SCROLL TO EXPLORE</div>
+      <div class="hero-index">N° 001 <span>—</span> 2026</div>
+    </section>
+
+    <section class="ticker" aria-label="Project keywords">
+      <div class="ticker-track">
+        <span>DESIGN IN MOTION <b>✳</b></span><span>CREATIVE CODE <b>✳</b></span><span>NEW PERSPECTIVES
+          <b>✳</b></span><span>DESIGN IN MOTION <b>✳</b></span><span>CREATIVE CODE <b>✳</b></span><span>NEW PERSPECTIVES
+          <b>✳</b></span>
+      </div>
+    </section>
+
+    <section class="experiments section-shell" id="experiments">
+      <div class="section-heading reveal">
+        <div>
+          <p class="eyebrow"><span class="eyebrow-line"></span> SELECTED INTERACTIONS</p>
+          <h2>THE PLAYGROUND<span class="heading-period">.</span></h2>
+        </div>
+        <p class="section-intro">Small worlds. Big feelings. Move your cursor, tap a card, and see what happens.</p>
+      </div>
+
+      <div class="filter-row reveal" role="group" aria-label="Filter experiments">
+        <span class="filter-label">FILTER /</span>
+        <button class="filter-button active" data-filter="all">All experiments <span>03</span></button>
+        <button class="filter-button" data-filter="motion">Motion <span>01</span></button>
+        <button class="filter-button" data-filter="form">Form <span>01</span></button>
+        <button class="filter-button" data-filter="light">Light <span>01</span></button>
+      </div>
+
+      <div class="project-grid">
+        <article class="project-card project-card-large reveal" data-category="motion" tabindex="0" role="button"
+          aria-label="Open Orbit Shift experiment">
+          <div class="project-visual visual-orbit">
+            <div class="visual-grid"></div>
+            <div class="mini-orbit orbit-x"></div>
+            <div class="mini-orbit orbit-y"></div>
+            <div class="mini-planet"><span></span></div>
+            <span class="visual-number">EXP / 001</span>
+            <span class="visual-open">↗</span>
+          </div>
+          <div class="project-info">
+            <div><span class="project-type">MOTION STUDY</span>
+              <h3>Orbit Shift</h3>
+            </div><span class="project-index">01 / 03</span>
+          </div>
+          <p class="project-description">A tiny planetary system that follows your curiosity.</p>
+        </article>
+
+        <article class="project-card reveal" data-category="form" tabindex="0" role="button"
+          aria-label="Open Liquid Form experiment">
+          <div class="project-visual visual-liquid">
+            <div class="liquid-shape"></div>
+            <div class="liquid-shape liquid-shape-two"></div>
+            <span class="visual-number">EXP / 002</span><span class="visual-open">↗</span>
+          </div>
+          <div class="project-info">
+            <div><span class="project-type">FORM STUDY</span>
+              <h3>Liquid Form</h3>
+            </div><span class="project-index">02 / 03</span>
+          </div>
+          <p class="project-description">Soft geometry with a mind of its own.</p>
+        </article>
+
+        <article class="project-card reveal" data-category="light" tabindex="0" role="button"
+          aria-label="Open Afterglow experiment">
+          <div class="project-visual visual-light">
+            <div class="light-disc"></div>
+            <div class="light-ring"></div>
+            <div class="light-flare"></div>
+            <span class="visual-number">EXP / 003</span><span class="visual-open">↗</span>
+          </div>
+          <div class="project-info">
+            <div><span class="project-type">LIGHT STUDY</span>
+              <h3>Afterglow</h3>
+            </div><span class="project-index">03 / 03</span>
+          </div>
+          <p class="project-description">A study in glow, contrast, and quiet energy.</p>
+        </article>
+      </div>
+      <p class="grid-footnote"><span class="footnote-dot"></span> ALL EXPERIMENTS ARE INTERACTIVE — TRY THEM OUT</p>
+    </section>
+
+    <section class="manifesto section-shell" id="about">
+      <div class="manifesto-art reveal">
+        <div class="manifesto-ring ring-one"></div>
+        <div class="manifesto-ring ring-two"></div>
+        <div class="manifesto-ring ring-three"></div>
+        <div class="manifesto-center">N<span>×</span>S</div>
+        <span class="manifesto-coordinate coord-one">40° 43' 55.3"N</span>
+        <span class="manifesto-coordinate coord-two">CREATIVE SYSTEM / 2026</span>
+      </div>
+      <div class="manifesto-copy reveal">
+        <p class="eyebrow"><span class="eyebrow-line"></span> THE IDEA BEHIND IT</p>
+        <h2>CODE IS A<br>CREATIVE <em>MATERIAL.</em></h2>
+        <p>NEXUS is a frontend playground built to explore how code can feel. No backend. No AI. Just thoughtful design,
+          a little physics, and the joy of making things move.</p>
+        <div class="principles">
+          <div><span>01</span><strong>Curiosity first</strong>
+            <p>Every interaction should invite exploration.</p>
+          </div>
+          <div><span>02</span><strong>Details matter</strong>
+            <p>Small choices create a stronger experience.</p>
+          </div>
+          <div><span>03</span><strong>Built for everyone</strong>
+            <p>Responsive, accessible, and mindful of motion.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section section-shell reveal">
+      <div class="cta-orb"></div>
+      <p class="eyebrow">END OF TRANSMISSION / BEGINNING OF SOMETHING</p>
+      <h2>STAY <em>CURIOUS.</em></h2>
+      <p>Every pixel is an opportunity to try something new.</p>
+      <a href="#home" class="button button-primary"><span>Back to the top</span><span class="button-arrow">↑</span></a>
+      <span class="cta-coordinate">NEXUS® / DIGITAL PLAYGROUND</span>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="#home"><span
+        class="brand-mark"><span></span><span></span><span></span></span><span>NEXUS<span
+          class="brand-dot">.</span></span></a>
+    <span>DESIGNED WITH CURIOSITY <span class="footer-star">✳</span></span>
+    <span>HTML / CSS / JAVASCRIPT</span>
+    <span>© 2026 NEXUS</span>
+  </footer>
+
+  <div class="experiment-modal" id="experiment-modal" aria-hidden="true" role="dialog" aria-modal="true"
+    aria-labelledby="modal-title">
+    <button class="modal-backdrop" data-close-modal aria-label="Close experiment"></button>
+    <div class="modal-panel">
+      <button class="modal-close" data-close-modal aria-label="Close experiment">×</button>
+      <p class="eyebrow"><span class="eyebrow-line"></span> INTERACTIVE EXPERIMENT</p>
+      <div class="modal-art" id="modal-art">
+        <div class="modal-object"></div>
+        <div class="modal-orbit"></div>
+      </div>
+      <span class="project-type" id="modal-type">MOTION STUDY</span>
+      <h2 id="modal-title">Orbit Shift</h2>
+      <p id="modal-description">Move your pointer around the experiment to influence its motion.</p>
+      <div class="modal-hint"><span class="status-dot"></span> MOVE YOUR POINTER / TOUCH TO INTERACT</div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite">Motion mode updated</div>
+</body>
+
+</html>
